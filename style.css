@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+  --Red: hsl(0, 100%, 74%); 
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: url(./images/bg-intro-desktop.png),var(--Red);
+    display: grid;
+    place-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+    ;
+}
+main{
+    max-width: 1160px;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* border: 1px solid red; */
+    transition: ease-in 0.5s;
+}
+.left-wrapper{
+    /* border: 1px solid rgb(0, 255, 221); */
+    display: grid;
+    place-content: center;
+}
+.left-wrapper h1{
+    color: white;
+    font-size: 3.4rem;
+    line-height: 70px;
+    margin-top: -3rem;
+}
+.left-wrapper p{
+    margin-top: 2rem;
+    color:rgb(247, 242, 242);
+    font-size: 1rem;
+    max-width: 500px;
+}
+.right-wrapper{
+    /* border: 1px solid whitesmoke; */
+}
+form{
+    background: #fff;
+    transition: ease 0.5s;
+    max-width: 100%;
+    min-height: 530px;
+    text-align: center;
+    margin-top: 1.2rem;
+    border-radius: 9px;
+    box-shadow: 0px 9px 5px 0px rgba(82, 83, 83, 0.39);
+}
+form *{
+    margin-top: 1.3rem;
+}
+form input{
+    width: 90%;
+    padding: 1.3rem 2rem;
+    border: 0.1rem solid rgba(12, 11, 11, 0.548);
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.082) rgba(0, 0, 0, 0.24) rgba(0, 0, 0, 0.24) rgba(0, 0, 0, 0.082);
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    outline: none;
+}
+form input:focus{
+    border-color: rgba(18, 19, 18, 0.5);
+}
+form button{
+    width: 90%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: white;
+    background: var(--Green);
+    border-radius: 7px;
+    border: none;
+}
+form p{
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--GrayishBlue);
+}
+form p span{
+    color: var(--Red);
+}
+.right-wrapper h3{
+    text-align: center;
+    font-size: 17px;
+    padding: 20px;
+    background: var(--Blue);
+    color: #fff;
+    border-radius: 9px;
+    box-shadow: 0px 7px 5px 0px rgba(82, 83, 83, 0.39);
+}
+.right-wrapper h3 span{
+    font-weight: 300;
+}
+@media only screen and (max-width: 375px) {
+    main{
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 650px;
+    padding: 1rem;
+    }
+    .left-wrapper{
+        grid-row: 1;
+        text-align: center;
+    }
+    .left-wrapper h1{
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    .right-wrapper{
+        margin-top: -40px;
+    }
+}
